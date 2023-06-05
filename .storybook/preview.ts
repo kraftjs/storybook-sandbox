@@ -1,7 +1,8 @@
-import type { Preview } from '@storybook/svelte';
+import type { Preview, Decorator } from '@storybook/svelte';
+import { withThemeByDataAttribute } from '@storybook/addon-styling';
 import '../src/lib/index.css'
 
-const preview: Preview = {
+export const preview: Preview = {
 	parameters: {
 		actions: { argTypesRegex: '^on[A-Z].*' },
 		controls: {
@@ -13,4 +14,13 @@ const preview: Preview = {
 	}
 };
 
-export default preview;
+export const decorators: Decorator[] = [
+	withThemeByDataAttribute({
+		themes: {
+			light: 'light',
+			dark: 'dark',
+		},
+		defaultTheme: 'light',
+		attributeName: 'data-mode',
+	}),
+];

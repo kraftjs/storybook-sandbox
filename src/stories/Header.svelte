@@ -19,7 +19,7 @@
 </script>
 
 <header>
-  <div class="storybook-header">
+  <div class="storybook-header dark:text-white dark:bg-slate-800">
     <div>
       <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" fill-rule="evenodd">
@@ -38,13 +38,13 @@
     </div>
     <div>
       {#if user}
-        <span class="welcome">
+        <span class="welcome dark:text-white">
           Welcome, <b>{user.name}</b>!
         </span>
-        <Button size="small" on:click={onLogout} label="Log out" />
+        <Button size="medium" on:click={onLogout} label="Log out" />
       {:else}
-        <Button size="small" on:click={onLogin} label="Log in" />
-        <Button primary size="small" on:click={onCreateAccount} label="Sign up" />
+        <Button size="medium" on:click={onLogin} label="Log in" />
+        <Button primary size="medium" on:click={onCreateAccount} label="Sign up" />
       {/if}
     </div>
   </div>
@@ -79,7 +79,6 @@
   }
 
   .storybook-header .welcome {
-    color: #333;
     font-size: 14px;
     margin-right: 10px;
   }

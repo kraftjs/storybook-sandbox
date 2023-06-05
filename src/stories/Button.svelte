@@ -17,7 +17,9 @@
    */
   export let label: string = '';
 
-  $: mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  $: mode = primary 
+    ? 'text-white bg-pink-600 border-pink-600 dark:bg-pink-700 dark:border-pink-700'
+    : 'text-slate-700 bg-transparent border-slate-700 dark:text-white dark:border-white';
 
   $: style = backgroundColor ? `background-color: ${backgroundColor}` : '';
 </script>
@@ -40,15 +42,6 @@
     cursor: pointer;
     display: inline-block;
     line-height: 1;
-  }
-  .storybook-button--primary {
-    color: white;
-    background-color: #1ea7fd;
-  }
-  .storybook-button--secondary {
-    color: #333;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
   }
   .storybook-button--small {
     font-size: 12px;

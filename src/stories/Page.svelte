@@ -4,7 +4,7 @@
   let user: { name: string } | null = null;
 </script>
 
-<article>
+<article class="dark:text-white dark:bg-slate-800">
   <Header
     {user}
     on:login={() => (user = { name: 'Jane Doe' })}
@@ -76,7 +76,6 @@
     padding: 48px 20px;
     margin: 0 auto;
     max-width: 600px;
-    color: #333;
   }
 
   .storybook-page h2 {
