@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Header from './Header.svelte';
+  import { Header } from './index.js';
 
   let user: { name: string } | null = null;
 </script>
